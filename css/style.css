@@ -1,0 +1,150 @@
+/* Resetando padding e margin globalmente */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Importante para evitar o scroll lateral */
+}
+
+/* Efeito de fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #000000, #3a1c4c); /* Gradiente de preto para roxo escuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* Impede o scroll lateral */
+    color: #e0e0e0; /* Cor do texto em tom claro para contraste com o fundo escuro */
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #f1c40f; /* Cor dourada para o título, para criar contraste */
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #f0f0f0; /* Cor do subtítulo em tom mais claro */
+    font-size: 0.9rem;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item h2 {
+    color: #f1c40f; /* Cor dourada para os subtítulos, criando harmonia com o título */
+    margin-bottom: 10px;
+}
+
+.item .image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.item p {
+    color: #f0f0f0; /* Cor do texto em tom claro */
+    font-size: 1rem;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #000000, #3a1c4c); /* Gradiente igual ao fundo da página */
+    padding: 10px 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 80px;
+    text-align: center;
+}
+
+footer p {
+    color: #f0f0f0; /* Cor do texto do footer */
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.button {
+    background: #8e44ad; /* Cor roxa escura para o botão */
+    color: #ffffff; /* Texto do botão em branco */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.button a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 18px ;
+}
+
+
+.button:hover {
+    background: #5e338b; /* Cor do botão ao passar o mouse, mais escura */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .item h2 {
+        font-size: 1.1rem;
+    }
+
+    .item p {
+        font-size: 0.9rem;
+    }
+
+    footer .button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
